@@ -1,6 +1,6 @@
 {
-  "name": "react-native-circular-chart",
-  "version": "1.0.9",
+  "name": "rn-circular-chart",
+  "version": "1.0.10",
   "description": "circular chart for react-native.",
   "main": "index.js",
   "module": "index.js",
@@ -13,6 +13,15 @@
     "!**/__fixtures__",
     "!**/__mocks__"
   ],
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "dist",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "yarn build",
@@ -39,14 +48,14 @@
     "react-native": ">=0.60.0",
     "react-native-svg": ">=9"
   },
-  "author": "Ram Singh <ram.singh5@kotak.com>",
+  "author": "Ram Singh <er.amudeep@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://https://github.com/eramudeep/react-native-circular-chart/issues"
   },
   "homepage": "https://https://github.com/eramudeep/react-native-circular-chart#readme",
   "devDependencies": {
-    "@react-native-community/bob": "^0.17.1",
+    "react-native-builder-bob": "^0.17.1",
     "@release-it/conventional-changelog": "^4.0.0",
     "@types/react": "^17.0.2",
     "@types/react-native": "^0.63.50",
@@ -84,7 +93,6 @@
       "git add"
     ]
   },
-  "dependencies": {},
   "eslintIgnore": [
     "node_modules/",
     "dist/"
