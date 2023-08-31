@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eramudeep/react-native-circular-chart.git"
+    "url": "git+https://github.com/eramudeep/rn-circular-chart.git"
   },
   "keywords": [
     "donut-chart",
@@ -51,9 +51,9 @@
   "author": "Ram Singh <er.amudeep@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://https://github.com/eramudeep/react-native-circular-chart/issues"
+    "url": "https://https://github.com/eramudeep/rn-circular-chart/issues"
   },
-  "homepage": "https://https://github.com/eramudeep/react-native-circular-chart#readme",
+  "homepage": "https://https://github.com/eramudeep/rn-circular-chart#readme",
   "devDependencies": {
     "react-native-builder-bob": "^0.17.1",
     "@release-it/conventional-changelog": "^4.0.0",
