@@ -13,15 +13,6 @@
     "!**/__fixtures__",
     "!**/__mocks__"
   ],
-  "@react-native-community/bob": {
-    "source": "src",
-    "output": "dist",
-    "targets": [
-      "commonjs",
-      "module",
-      "typescript"
-    ]
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "yarn build",
@@ -33,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Novsochetra/react-native-circular-chart.git"
+    "url": "git+https://github.com/eramudeep/react-native-circular-chart.git"
   },
   "keywords": [
     "donut-chart",
@@ -48,12 +39,12 @@
     "react-native": ">=0.60.0",
     "react-native-svg": ">=9"
   },
-  "author": "sochetra NOV <sochetra12.nov@gmail.com>",
+  "author": "Ram Singh <ram.singh5@kotak.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Novsochetra/react-native-circular-chart/issues"
+    "url": "https://https://github.com/eramudeep/react-native-circular-chart/issues"
   },
-  "homepage": "https://github.com/Novsochetra/react-native-circular-chart#readme",
+  "homepage": "https://https://github.com/eramudeep/react-native-circular-chart#readme",
   "devDependencies": {
     "@react-native-community/bob": "^0.17.1",
     "@release-it/conventional-changelog": "^4.0.0",
