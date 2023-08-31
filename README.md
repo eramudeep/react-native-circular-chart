@@ -1,4 +1,4 @@
-[<img src="https://github.com/Novsochetra/rn-circular-chart/blob/main/assets/thumbnail.png" width="250"/>](image.png)
+[<img src="https://github.com/Novsochetra/react-native-circular-chart/blob/main/assets/thumbnail.png" width="250"/>](image.png)
  
 
 ## React Native Circular Chart Documentation
