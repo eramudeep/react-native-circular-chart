@@ -17,15 +17,20 @@ import { DonutChart } from "rn-circular-chart";
 
 <View style={styles.sectionWrapper}>
   <DonutChart
-    data={DATA}
+    data={[
+                    {name: "my Name", value: 1000, color:'#AA86F7'},
+                    {name: "Name", value: 3000, color:'#94D5FA'},
+                    {name: "ac Name", value: 4000, color:'#8F9FF5'}
+                ]}
     strokeWidth={15}
     radius={90}
-    containerWidth={width - PADDING * 2}
+    containerWidth={width - PADDING * 2} // width comes from Dimensions
     containerHeight={105 * 2}
     type="round"
     startAngle={0}
     endAngle={360}
     animationType="slide"
+    centerLabel={ {"label":'CURRENT VALUE',"labelValue":"₹20,34,343" }}
   />
 </View>
 
