@@ -10,7 +10,7 @@ import {
   Easing,
 } from "react-native";
 
-import { Svg, Path } from "react-native-svg";
+import { Svg, Path, Mask } from "react-native-svg";
 import { Square } from "./packages/shape";
 import { Arc, ArcParams, ViewBox } from "./packages/svg";
 import { sum } from "./packages/array";
@@ -21,6 +21,10 @@ export type DonutItem = {
   value: number;
   color: string;
 };
+export type CenterLabel = {
+  label?: string;
+  labelValue?: number
+}
 
 export type DonutAnimationType = "fade" | "slide";
 
@@ -36,9 +40,11 @@ export type IDonutProps = {
   labelValueStyle?: StyleProp<TextStyle>;
   labelTitleStyle?: StyleProp<TextStyle>;
   labelWrapperStyle?: StyleProp<ViewStyle>;
-  containerStyle?: StyleProp<ViewStyle>;
-
+  containerStyle?: StyleProp<ViewStyle>; 
   animationType?: DonutAnimationType;
+  centerLabel?: CenterLabel;
+  arcDistence?: number;
+
 };
 
 const AnimatedPath = Animated.createAnimatedComponent(Path);
@@ -58,6 +64,8 @@ export const DonutChart = ({
   labelValueStyle,
   labelTitleStyle,
   containerStyle,
+  centerLabel,
+  arcDistence = 0
 }: IDonutProps) => {
   let donutItemListeners: any = [];
   const viewBox = new ViewBox({
@@ -208,7 +216,7 @@ export const DonutChart = ({
         coordY: viewBox.getCenterCoord().y,
         radius: radius,
         startAngle: startValue,
-        endAngle: angle.value,
+        endAngle: angle.value - arcDistence,
       };
       const drawPath = new Arc(arcParams).getDrawPath();
 
@@ -297,7 +305,7 @@ export const DonutChart = ({
               coordY: viewBox.getCenterCoord().y,
               radius: radius,
               startAngle: d.from,
-              endAngle: d.to,
+              endAngle: d.to - arcDistence ,
             };
             const drawPath = new Arc(arcParams).getDrawPath();
 
@@ -319,12 +327,13 @@ export const DonutChart = ({
           })}
         </Svg>
         <Animated.View style={_getLabelWrapperStyle()}>
-          <Text style={_getLabelValueStyle(displayValue?.color)}>
-            {displayValue?.value}
-          </Text>
-          <Text style={_getLabelTitleStyle(displayValue?.color)}>
-            {displayValue?.name}
-          </Text>
+          {centerLabel?.label &&<Text style={{fontSize:10}}>
+            {centerLabel?.label}
+          </Text>}
+          {centerLabel?.labelValue &&<Text style={{fontSize:16, color:'#000', fontWeight:'700'}}>
+            {centerLabel?.labelValue}
+          </Text>}
+          
         </Animated.View>
       </View>
     </Fragment>
