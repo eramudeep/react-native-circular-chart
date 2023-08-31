@@ -1,4 +1,4 @@
-[<img src="https://github.com/Novsochetra/react-native-circular-chart/blob/main/assets/thumbnail.png" width="250"/>](image.png)
+[<img src="https://github.com/Novsochetra/rn-circular-chart/blob/main/assets/thumbnail.png" width="250"/>](image.png)
 
 [video demo](https://user-images.githubusercontent.com/20807120/109374979-d3250b00-78eb-11eb-8135-9c7cc338ce43.mov)
 
@@ -7,13 +7,13 @@
 
 ### Import components
 
-1. `yarn add react-native-circular-chart`
+1. `yarn add rn-circular-chart`
 2. `yarn add react-native-svg` install peer dependencies
-3. use with ES6 syntax to import components `import { DonutChart } from "react-native-circular-chart";`
+3. use with ES6 syntax to import components `import { DonutChart } from "rn-circular-chart";`
 
 ### Quick Example
 ```js
-import { DonutChart } from "react-native-circular-chart";
+import { DonutChart } from "rn-circular-chart";
 
 <View style={styles.sectionWrapper}>
   <DonutChart
