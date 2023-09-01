@@ -51,9 +51,9 @@
   "author": "Ram Singh <er.amudeep@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://https://github.com/eramudeep/rn-circular-chart/issues"
+    "url": "https://github.com/eramudeep/react-native-circular-chart/issues"
   },
-  "homepage": "https://https://github.com/eramudeep/rn-circular-chart#readme",
+  "homepage": "https://github.com/eramudeep/react-native-circular-chart#readme",
   "devDependencies": {
     "react-native-builder-bob": "^0.17.1",
     "@release-it/conventional-changelog": "^4.0.0",
