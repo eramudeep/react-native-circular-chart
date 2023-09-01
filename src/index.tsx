@@ -40,10 +40,11 @@ export type IDonutProps = {
   labelValueStyle?: StyleProp<TextStyle>;
   labelTitleStyle?: StyleProp<TextStyle>;
   labelWrapperStyle?: StyleProp<ViewStyle>;
-  containerStyle?: StyleProp<ViewStyle>; 
+  containerStyle?: StyleProp<ViewStyle>;
   animationType?: DonutAnimationType;
   centerLabel?: CenterLabel;
   arcDistence?: number;
+  centerComponent: () => void
 
 };
 
@@ -65,7 +66,8 @@ export const DonutChart = ({
   labelTitleStyle,
   containerStyle,
   centerLabel,
-  arcDistence = 0
+  arcDistence = 0,
+  centerComponent
 }: IDonutProps) => {
   let donutItemListeners: any = [];
   const viewBox = new ViewBox({
@@ -305,7 +307,7 @@ export const DonutChart = ({
               coordY: viewBox.getCenterCoord().y,
               radius: radius,
               startAngle: d.from,
-              endAngle: d.to - arcDistence ,
+              endAngle: d.to - arcDistence,
             };
             const drawPath = new Arc(arcParams).getDrawPath();
 
@@ -327,13 +329,14 @@ export const DonutChart = ({
           })}
         </Svg>
         <Animated.View style={_getLabelWrapperStyle()}>
-          {centerLabel?.label &&<Text style={{fontSize:10}}>
+          {!centerComponent && centerLabel?.label && <Text style={{ fontSize: 10 }}>
             {centerLabel?.label}
           </Text>}
-          {centerLabel?.labelValue &&<Text style={{fontSize:16, color:'#000', fontWeight:'700'}}>
+          {!centerComponent && centerLabel?.labelValue && <Text style={{ fontSize: 16, color: '#000', fontWeight: '700' }}>
             {centerLabel?.labelValue}
           </Text>}
-          
+
+          {centerComponent && centerComponent()}
         </Animated.View>
       </View>
     </Fragment>
