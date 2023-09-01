@@ -1,6 +1,6 @@
 {
   "name": "rn-circular-chart",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "circular chart for react-native.",
   "main": "index.js",
   "module": "index.js",
